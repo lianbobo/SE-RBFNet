@@ -13,11 +13,11 @@ cd SE-RBFNet
 ```
 #### This repository includes the following folders:
 
-- app/      : Contains executable `.so` files for OCtree construction  and reconstruction. OCtree-related components are adapted from https://github.com/jsnln/ParametricGaussRecon.git
+- app/      : Contains executable `.so` files for SE-RBFNet training, Octree construction, and Marching Cubes explicit surface extraction. OCtree-related components are adapted from https://github.com/jsnln/ParametricGaussRecon.git.
 
-- DATA/     : Includes several sample point cloud datasets. Full benchmark data can be found at https://github.com/ErlerPhilipp/points2surf.git
+- DATA/     : Contains several sample mesh datasets for testing.
 
-- results/  : Output directory for sampled point clouds, OCtree data, reconstructed surfaces, etc.
+- results/  : Output directory for results, including approximated SDFs, constructed Octree data, and explicit surfaces extracted from the approximated SDFs, etc.
 
 
 ### 2. Environment Setup
@@ -33,9 +33,9 @@ Tested Environment: Python 3.10, CUDA 12.1, Ubuntu 18.04
 
 - sample_num: Number of points to sample from the mesh (e.g., 40000)
 
-- batch_size: batch size (e.g., 10000)
+- batch_size: batch size during training (e.g., 10000)
 
-- thres_min: threshold (e.g., 0.02)
+- thres: threshold used to control sparsity (e.g., 0.02)
 
 - save_path: Directory to store the output results (e.g., 'results')
 
@@ -43,7 +43,7 @@ Tested Environment: Python 3.10, CUDA 12.1, Ubuntu 18.04
 
 
 ### 4. Output
-Once the script finishes, all results (sampled point clouds, OCtree data, reconstructed surfaces) will be saved under the results/ directory.
+Once the script finishes, all results (sampled points, OCtree data, explicit surfaces extracted from the approximated SDFs) will be saved under the results/ directory.
 
 
 

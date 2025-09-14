@@ -9,8 +9,8 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 if __name__ == '__main__':
     file = 'DATA/Armadillo.ply'
     sample_num = 40000         # number of sampled points
-    batch_size = 10000         # batch size
-    thres_min = 0.02           # threshold  
+    batch_size = 10000         # batch size during training
+    thres = 0.02               # threshold used to control sparsity  
     save_path = 'results'
     seed = 0
-    SERBFNet.SE_RBFNet(file, sample_num, batch_size, thres_min, save_path, seed=seed)
+    SERBFNet.SE_RBFNet(file, sample_num, batch_size, thres, save_path, seed=seed)
