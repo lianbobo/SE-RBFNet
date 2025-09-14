@@ -1,0 +1,6 @@
+trimesh==4.5.3
+numpy==1.26.3
+scikit-learn==1.5.1
+point-cloud-utils==0.31.0
+kaolin==0.17.0
+torch==2.4.1+cu121
