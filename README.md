@@ -35,8 +35,6 @@ Tested Environment: Python 3.10, CUDA 12.1, Ubuntu 18.04
 
 - batch_size: batch size during training (e.g., 10000)
 
-- thres: threshold used to control sparsity (e.g., 0.02)
-
 - save_path: Directory to store the output results (e.g., 'results')
 
 - seed: Random seed for reproducibility (e.g., 0)
